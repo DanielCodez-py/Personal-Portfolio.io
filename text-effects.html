@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="#" type="text/css">
+    <script src="#" type="text/javascript"></script>
+    <title>Text Effects Demo</title>
+</head>
+<body>
+    <main id="#">
+        <h1>thing</h1>
+        <style>
+            :root {
+                font-family: Inter;
+                --shade1: #ff0000;
+                --shade2: #23d000;
+                --shade3: #009694;
+                --shade4: #000a79;
+                --shade5: #6c0041;
+                --shade6: #f70364;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                height: 100vh;
+                width: 100vw;
+                background: #111114;
+            }
+
+            main {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                place-items: center;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 80px;
+                font-style: italic;
+                font-weight: 800;
+                transition: 0.5s ease;
+                width: 50%;
+                -webkit-text-stroke: 2px #000;
+            }
+
+            
+            h1:hover {
+                color: var(--shade1);
+                animation-name: glitch;
+                animation-duration: 750ms;
+                animation-iteration-count: 5;
+            }
+
+            @keyframes glitch {
+                10% {
+                    transform: translateX(20px);
+                    text-shadow: -5px 5px 0px var(--shade2),-5px 5px 0px var(--shade2), -30px 9px 0px var(--shade3), 17px 13px 0px var(--shade4); 
+                }
+                15% {
+                    transform: translateX(-5px);
+                }
+                20% {
+                    transform: translateX(10px);
+                }
+                30% {
+                    transition: 50ms ease;
+                }
+
+            }
+        </style>
+    </main>
+</body>
+</html>

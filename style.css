@@ -1,0 +1,360 @@
+/** Global Styles **/
+:root {
+    font-family: "Poppins";
+    font-size: 16px;
+    --bg-primary: #000505;
+    --bg-secondary: #243c3c;
+    --bg-stroke-secondary: #0070E0;
+    --fg-primary: #2693ff;
+    --fg-stroke-primary: #2693ff;
+    --fg-secondary: #0070E0;
+    --svg-bg-primary: #2693ff;
+    --svg-bg-secondary: #0059b1;
+    --project-desc-font: "Darker Grotesque"; 
+    --anime-text-shade1: 
+    --shade1: #ff0000;
+    --shade2: #23d000;
+    --shade3: #009694;
+    --shade4: #000a79;
+    --shade5: #6c0041;
+    --shade6: #f70364; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: var(--bg-primary);
+    color: var(--fg-primary);
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+p {
+    font-weight: 300;
+}
+
+svg {
+    margin: 0 5px; 
+    color: var(--svg-bg-primary);
+    width: 35px;
+    height: auto;
+    transition: 300ms ease;
+}
+
+svg:hover {
+    color: var(--svg-bg-secondary);
+}
+/** Global Styles End **/
+
+
+/** Navbar Styles **/
+#nav-div {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: center;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    z-index: 10;
+}
+
+#navbar {
+    width: 50%;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 20px 10px;
+    border: 2px solid var(--bg-stroke-secondary);
+    border-radius: 0px 0px 10px 10px;
+    background: var(--bg-primary);
+}
+
+.navlink {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--fg-primary);
+}
+/** Navbar Styles End **/
+
+
+/** Welcome Section Styles **/
+section {
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-rows: 20% 15%;
+    place-items: center;
+}
+
+#welcome-section h1 {
+    font-size: 5.5rem;
+    text-align: center;
+}
+
+#main-figure {
+    transition: 0.5s ease;
+}
+
+/** Welcome section Animated Text **/
+#main-figure:hover {
+    transform: translateY(17px);
+    /* text-shadow: -5px 5px 0px var(--shade2),-5px 5px 0px var(--shade2), -30px 9px 0px var(--shade3), 17px 13px 0px var(--shade4);  */
+}
+/** Welcome section animated text styles end **/
+#welcome-section p {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+}
+/** Welcome Section Styles End**/
+
+/** Projects Section Styles **/
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.project-title {
+    width: 80%;
+    /* height: 100%; */
+    /* display: grid; */
+    /* place-items: center; */
+    font-size: 3.5rem;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 120%;
+}
+
+#project-container {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-tile {
+    width: 80%;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    background: url("images/project-cover.jpg");
+    background-size: cover !important;
+    border-radius: 20px;
+    box-shadow: 3px 4px 16px rgb(33,33,33,11%), 7px 7px 16px rgb(128,128,128,22%);}
+
+.project-tile a {
+    width: 100%;
+    min-height: 60px;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    padding: 15px;
+    display: grid;
+    align-content: center;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 11px 3px 4px rgb(147,147,147,15%), 3px 2px 9px rgba(147, 147, 147, 0.276);
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    transition: 600ms ease;
+}
+
+#tech-doc {
+    background: url("images/Technical\ Doc\ covr.png");
+}
+
+#land-page {
+    background: url("images/Landing\ page\ cover.png");
+}
+
+#survey-form {
+    background: url("images/Survey\ form\ cover.png");
+}
+/** Projects Section Styles End **/
+
+/** Contact Section Styles **/
+#contacts {
+    max-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-top: 6%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 20% 30%; 
+}
+
+.contact-text {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 70% 30%;
+}
+
+.contact-text h2 {
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 5rem;
+    width: 100%;
+    /* min-height: 50%;
+    display: grid;
+    place-items: center;
+    place-self: flex-end; */
+}
+
+.contact-text p {
+    font-weight: 300;
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
+    /* height: 100%; */
+}
+
+.contact-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.contact-link {
+    margin: 5px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+.copyright {
+    width: 50%;
+    align-self: flex-end;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+/** Contact Section Styles End **/
+
+/** Mobile Responsive Layout Styles **/
+@media (max-width: 800px) {
+    /**Mobile Navdiv Styles **/
+    #navbar {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .navlink {
+        font-size: 1rem;
+    }
+    /** Mobile Navdiv Styles End **/
+
+    /** Mobile Welcome Section Styles **/
+    #welcome-section {
+        grid-template-rows: 45% 20%;
+        place-content: center;
+    }
+
+    #welcome-section h1 {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    #welcome-section p {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    /** Mobile Welcome Section Styles End **/
+
+    /** Mobile Project Section Styles **/
+    #projects {
+        padding-top: 50px;
+    }
+
+    #project-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .project-tile {
+        overflow: hidden;
+        width: 250px;
+        height: 300px;
+    }
+
+    .project-title {
+        font-size: 2.5rem;
+    }
+
+    .project-tile a {
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        box-shadow: none;
+    }
+    /** Mobile Project Section Styles End **/
+    
+    /** Mobile Contacts Section Styles **/
+    #contacts {
+        position: relative;
+        padding-top: 50px;
+        grid-template-rows: 50% 20% 20%;
+    }
+
+    .contact-text h2 {
+        font-size: 3.5rem;
+    }
+
+    .contact-link {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+
+    .copyright {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .copyright h3 {
+        font-weight: 500;
+    }
+
+    .copyright p {
+        font-size: 0.8rem;
+    }
+}
+ 
